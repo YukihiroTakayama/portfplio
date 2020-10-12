@@ -1,0 +1,220 @@
+// Place all the styles related to the public/Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.recipe_post_btn {
+	text-align: center;
+	margin: 10px 0 40px;
+}
+
+.item-box > .flex {
+	background-color: #ECECEC;
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+	-webkit-background-size: 7px 7px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.ranking {
+	float: right;
+	margin: 10px 60px 0 0;
+	padding: 20px;
+	background-color: #fff462;
+    background-image: radial-gradient(#e0de94 8%, transparent 6%), radial-gradient(#e0de94 8%, transparent 6%);
+    background-position: 0 0, 8px 8px;
+    background-size : 16px 16px;
+	border-radius: 30px 0 30px 0;
+}
+
+.ranking > p {
+	text-align: center;
+}
+
+.company-box {
+	width: 100%;
+}
+
+.company-info {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.company-headline, .factory-headline {
+	text-align: center;
+	padding: 40px 0;
+}
+
+.info-box {
+	margin: 50px 100px;
+}
+
+.logo {
+    float: left;
+	padding-bottom: 30px;
+	margin-left: 100px;
+}
+
+.info-text {
+    float: right;
+	padding-bottom: 30px;
+	margin-right: 100px;
+}
+
+.info-text p {
+	padding-bottom: 10px;
+}
+
+#map {
+    float: right;
+	width: 400px;
+    height: 300px;
+    padding: 20px;
+}
+
+.map-text {
+    float: left;
+    background-color: #FFFFFF;
+    padding: 20px 30px;
+}
+
+.factory-info {
+	width: 70%;
+	margin: 0 auto;
+	background-image: image-url('jonathan-hanna-Qn_ZS9q62aI-unsplash.jpg');
+	background-size: 100%;
+	padding-bottom: 30px;
+	background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+}
+
+.item_container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.item_container > .flex {
+	background-color: #ECECEC;
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+	-webkit-background-size: 7px 7px;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.index_item_box {
+	text-align: center;
+}
+
+.item_name {
+	font-size: 20px;
+	margin: 8px 0;
+	padding: 3px 0;
+	background-color: #FFFFFF;
+	width: 230px;
+}
+
+.item_caption {
+	font-size: 15px;
+	padding: 3px 0 0;
+	width: 230px;
+}
+
+.item_price {
+	padding-bottom: 3px;
+}
+
+.item_price > .item_price_font {
+	font-size: 10px;
+}
+
+.submit_btn {
+	padding: 10px;
+}
+
+.show_item_container > .flex {
+	background-color: #ECECEC;
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+	-webkit-background-size: 7px 7px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.show_item_container > .item_container > .item_image {
+	margin-right: 150px;
+}
+
+.item_content {
+	text-align: center;
+}
+
+.show_item_recipe_box {
+    background-color: #EEEEEE;
+	width: 60%;
+	margin: 40px auto;
+    padding: 30px;
+    border-radius: 30px 0 30px 30px;
+}
+
+.show_item_recipe_flex {
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.show_item_recipe {
+    text-align: center;
+	width: 60%;
+	padding-left: 100px;
+}
+
+.show_item_name {
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+.show_item_recipe_iine {
+	width: 40%;
+}
+
+.rank {
+	text-align: center;
+	font-size: 25px;
+	color: #B8860B;
+	padding-bottom: 20px;
+}
+
+.not_member_box {
+	padding: 10px 0;
+	margin: 50px auto;
+    width: 60%;
+    background-color: #fff462;
+    background-image: radial-gradient(#e0de94 8%, transparent 6%), radial-gradient(#e0de94 8%, transparent 6%);
+    background-position: 0 0, 8px 8px;
+    background-size : 16px 16px;
+    border-radius: 20px;
+}
+
+.not_member_message {
+    padding-top: 10px;
+	text-align: center;
+}
+
+.not_member_message p {
+	font-size: 20px;
+	padding: 5px;
+}
+
+

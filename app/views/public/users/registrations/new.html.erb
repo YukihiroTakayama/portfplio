@@ -1,0 +1,65 @@
+<div class="headline">新規会員登録</h2>
+
+<div class="background">
+    <div class="signup_flex">
+      <div class="site_info">
+        <span class="greeting">SUNNY MILKのサイトへようこそ！</span>
+        <div class="explain">
+          SUNNY MILKは、バターはチーズなどの乳製品を扱う乳業メーカーです。<br>
+          このサイトでは、SUNNY MILK製品を使用したレシピを募集しています。
+        </div>
+        <div class="explain_ranking">
+          1〜3月、4〜6月、7〜9月、10〜12月の期間内に投稿されたレシピの中で<br>
+          それぞれ最人気レシピを投稿した投稿者の方には<br>
+          豪華景品をプレゼントいたします！
+        </div>
+        <%= image_tag '/donald-modeste-RIPtkzf8vno-unsplash.jpg', class:"sign_up_image", alt: "牛乳の写真", title: "牛乳", width: "300", hight: "200" %>
+      </div>
+      <div class="sign_up">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "public/users/shared/error_messages", resource: resource %>
+
+          <div class="field">
+            <%= f.label :お名前, class:"sign_up_title" %>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form_box" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :郵便番号, class:"sign_up_title" %>
+            <%= f.text_field :postal_code, autofocus: true, autocomplete: "postal_code", class:"form_box" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :住所, class:"sign_up_title" %>
+            <%= f.text_area :address, autofocus: true, autocomplete: "address", class:"form_box" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :電話番号, class:"sign_up_title" %>
+            <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", class:"form_box" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :メールアドレス, class:"sign_up_title" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form_box" %>
+          </div>
+
+          <div class="field">
+            <% if @minimum_password_length %>
+            <%= f.label :パスワード, class:"sign_up_pass" %><span class="sign_up_pass">(<%= @minimum_password_length %> 字以上)</span>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password", class:"form_box" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :パスワード（確認用）, class:"sign_up_title" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form_box" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "登録", class:"sign_btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>

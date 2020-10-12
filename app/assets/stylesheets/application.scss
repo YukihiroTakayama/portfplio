@@ -1,0 +1,156 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-box {
+    height: 400px;
+    background-size: cover;
+    width: 100%;
+}
+
+.logo {
+	font-size: 100px;
+	line-height: 70px;
+	margin: 10px 0 0 10px;
+}
+
+.milk-image1 {
+	background-image: image-url('/leon-ephraim-AxoNnnH1Y98-unsplash.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 800px;
+	background-position: center center;
+}
+
+.milk-image2 {
+	background-image: image-url('/becca-tapert-jNRoaz5xY_c-unsplash.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+.milk-image3 {
+	background-image: image-url('/jagoda-kondratiuk-sDeGlMAwcH4-unsplash.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+.main {
+	padding-top: 70px;
+}
+
+.nav {
+    float: right;
+    list-style: none;
+}
+
+.nav li {
+	float: left;
+	padding-right: 30px;
+	color: black;
+	line-height: 70px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+	height: 70px;
+	background-color: #FFFFFF;
+}
+
+.rights {
+	text-align: center;
+	line-height: 70px;
+	color: #777777;
+	font-size: 7px;
+}
+
+.headline {
+	text-align: center;
+	font-size: 20px;
+	padding: 30px 0;
+	background-color: #ffffff;
+}
+
+.dot {
+  margin: auto;
+  width: 100%;
+  background-color: #ffffff;
+  background-image: radial-gradient(#75A9FF 8%, transparent 6%), radial-gradient(#75A9FF 8%, transparent 6%);
+  background-position: 0 0, 8px 8px;
+  background-size : 16px 16px;
+}
+
+.container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.page {
+	text-align: center;
+}
+
+.rank_1 {
+	text-align: center;
+	font-size: 25px;
+	color: #B8860B;
+	padding-bottom: 20px;
+}
+
+.rank_2 {
+	text-align: center;
+	font-size: 25px;
+	color: #708090;
+	padding-bottom: 20px;
+}
+
+.rank_3 {
+	text-align: center;
+	font-size: 25px;
+	color: #CD853F;
+	padding-bottom: 20px;
+}
+
+.rank {
+	text-align: center;
+	font-size: 25px;
+	color: black;
+	padding-bottom: 20px;
+}
+
+.fa-crown {
+	color: #B8860B;
+}
+
+
+
+
+
+

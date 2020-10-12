@@ -1,0 +1,14 @@
+
+<div class="headline">ユーザー</div>
+  <div class="container">
+	  <% @users.each do |user| %>
+	    <div class="admins_user_flex">
+	      <div class="admins_user_image"><%= attachment_image_tag user, :image, size:'200x150' %></div>
+		  <div class="admins_user_name">ユーザー名：<%= user.name %></div>
+		  <div class="admins_user_info">
+	        <%= link_to "このユーザー情報を見る", admins_user_path(user) %>
+		  </div>
+		</div>
+	  <% end %>
+      <div class="page"><%= paginate @users %></div>
+  </div>

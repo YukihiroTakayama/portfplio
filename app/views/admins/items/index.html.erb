@@ -1,0 +1,65 @@
+
+<div class="headline">商品</div>
+  <div class="container">
+	  <% @items.each do |item| %>
+	    <div class="admins_item_flex">
+	      <div class="admins_item_image"><%= attachment_image_tag item, :image, size:'200x150' %></div>
+		  <div class="admins_item_name">
+		  	<%= link_to item.name, admins_item_path(item) %>
+		  </div>
+		  <div class="admins_item_info">
+	        <p>商品説明：<%= item.caption %></p>
+		    <p>税抜き価格：<%= item.price %>円</p>
+		  </div>
+		</div>
+	  <% end %>
+	  <div class="new_item_path">
+	  	<%= link_to "商品を追加する", new_admins_item_path, class:"btn btn-primary" %>
+	  </div>
+      <div class="page"><%= paginate @items %></div>
+  </div>
+  <p class="graph">投稿されたレシピ数</p>
+  <div class="col-lg-4">
+	  <script>
+	  var dataset = [
+	  <% @items.each do |item| %>
+	    {'name':`<%= item.name %>`, 'value':<%= item.recipes.count %>},
+	  <% end %>
+	  ];
+
+	  var width = 400;
+	  var height = 300;
+	  var padding = 30;
+
+	  var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
+
+	  var xScale = d3.scaleBand()
+	    .rangeRound([padding, width - padding])
+	    .padding(0.4)
+	    .domain(dataset.map(function(d) { return d.name; }));
+
+	  var yScale = d3.scaleLinear()
+	    .domain([0, d3.max(dataset, function(d) { return d.value; })])
+	    .range([height - padding, padding]);
+
+	  svg.append("g")
+	    .attr("transform", "translate(" + 0 + "," + (height - padding) + ")")
+	    .call(d3.axisBottom(xScale));
+
+	  svg.append("g")
+	    .attr("transform", "translate(" + padding + "," + 0 + ")")
+	    .call(d3.axisLeft(yScale));
+
+	  svg.append("g")
+	    .selectAll("rect")
+	    .data(dataset)
+	    .enter()
+	    .append("rect")
+	    .attr("x", function(d) { return xScale(d.name); })
+	    .attr("y", function(d) { return yScale(d.value); })
+	    .attr("width", xScale.bandwidth())
+	    .attr("height", function(d) { return height - padding - yScale(d.value); })
+	    .attr("fill", "steelblue");
+	  </script>
+	</div>
+
